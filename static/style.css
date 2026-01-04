@@ -1,0 +1,200 @@
+
+/* =========================
+   MSRIT THEME VARIABLES
+   ========================= */
+:root {
+    --msrit-orange: #f36f21;
+}
+
+/* =========================
+   GLOBAL
+   ========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* =========================
+   CHAT CONTAINER
+   ========================= */
+.chat-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.chat-header {
+    background: var(--msrit-orange);
+    color: white;
+    padding: 14px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* =========================
+   CHAT BOX
+   ========================= */
+#chat-box {
+    padding: 12px;
+    height: 380px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* =========================
+   USER MESSAGE
+   ========================= */
+.user-message {
+  background: #f1f5ff;
+  color: #222;
+  padding: 10px 14px;
+  border-radius: 12px 12px 4px 12px;
+  margin: 6px 0;
+  max-width: 75%;
+  align-self: flex-end;
+  font-size:14px;
+}
+
+.bot-message {
+  background: #fff3e6;
+  margin:6px 0;
+  font-size:14.5px;
+  line-height:1.6;
+  font-weight:500;
+  color: #333;
+  padding: 10px 14px;
+  border-radius: 12px 12px 12px 4px;
+  margin: 6px 0;
+  max-width: 80%;
+}
+/* =========================
+   TYPING INDICATOR
+   ========================= */
+#typing-indicator {
+    display: none;
+    font-size: 13px;
+    color: var(--msrit-orange);
+    margin: 6px 12px;
+    font-style: italic;
+}
+
+/* =========================
+   SUGGESTION BUTTONS
+   ========================= */
+.suggestions {
+    padding: 10px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+
+.suggestions button {
+    font-family:'Poppins',sans-serif;
+    background: #ffffff;
+    border: 1px solid var(--msrit-orange);
+    border-radius: 14px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight:500;
+    color: var(--msrit-orange);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+
+.suggestions button:hover {
+    background: var(--msrit-orange);
+    color: white;
+}
+
+/* =========================
+   INPUT AREA
+   ========================= */
+.input-area {
+    display: flex;
+    padding: 10px;
+    gap: 6px;
+    border-top: 1px solid #eee;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: var(--msrit-orange);
+}
+
+#send-btn {
+    background: var(--msrit-orange);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#send-btn:hover {
+    opacity: 0.9;
+}
+/* =========================
+   CHATBOT TOGGLE BUTTON
+   ========================= */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: var(--msrit-orange);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+/* =========================
+   CHATBOT COLLAPSIBLE BOX
+   ========================= */
+#chatbot-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999;
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(40px);
+}
+
+
+
+
