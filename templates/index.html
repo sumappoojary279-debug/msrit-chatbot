@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MSRIT Virtual Assistant</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chat-container hidden" id="chatbot-box">
+
+
+    <div class="chat-header">
+        MSRIT Admission & Information Assistant
+    </div>
+
+    <div id="chat-box"></div>
+
+    <div id="typing-indicator">🤖 MSRIT Bot is typing...</div>
+
+    <div class="suggestions">
+        <button onclick="sendQuickMessage('Admissions')">🎓 Admissions</button>
+        <button onclick="sendQuickMessage('Courses')">📘 Courses</button>
+        <button onclick="sendQuickMessage('Eligibility')">✅ Eligibility</button>
+        <button onclick="sendQuickMessage('Placements')">💼 Placements</button>
+        <button onclick="sendQuickMessage('Scholarships')">🎓 Scholarships</button>
+        <button onclick="sendQuickMessage('Facilities')">🏫 Facilities</button>
+        <button onclick="sendQuickMessage('Documents')">🧾 Documents</button>
+        <button onclick="sendQuickMessage('Contact')">📞 Contact</button>
+        <button onclick="sendQuickMessage('Hostel')"> Hostel</button>
+        <button onclick="sendQuickMessage('Fee structure')"> Fee structure</button>
+         <button onclick="sendQuickMessage('clubs')"> Clubs</button>
+
+
+
+    </div>
+
+    <div class="input-area">
+        <input id="user-input" type="text" placeholder="Type your question here...">
+        <button id="send-btn">Send</button>
+    </div>
+
+</div>
+<!-- Chatbot Toggle Button -->
+<div id="chatbot-toggle">🤖</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
